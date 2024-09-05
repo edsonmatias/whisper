@@ -1,0 +1,200 @@
+1
+00:00:00,000 --> 00:00:20,400
+A regressão de Lennie é uma técnica estatística para modelar a relação entre um
+
+2
+00:00:20,400 --> 00:00:23,800
+Variável de saída e uma ou mais variáveis ​​de entrada.
+
+3
+00:00:23,800 --> 00:00:28,280
+Em termos do leigo, pense nisso como ajustando uma linha através de alguns pontos de dados, como mostrado aqui,
+
+4
+00:00:28,280 --> 00:00:32,719
+Assim, você pode fazer previsões sobre dados desconhecidos, assumindo que haja uma relação linear entre
+
+5
+00:00:32,719 --> 00:00:35,560
+as variáveis.
+
+6
+00:00:35,560 --> 00:00:40,400
+Você pode estar familiarizado com a função linear Y é igual a MX mais B, onde Y é a saída
+
+7
+00:00:40,400 --> 00:00:43,600
+variável, também chamada de variável dependente.
+
+8
+00:00:43,600 --> 00:00:47,799
+Você também pode ver expresso como f de x, a função da variável de entrada.
+
+9
+00:00:47,799 --> 00:00:54,359
+X, por outro lado, serviria como variável de entrada, também chamado de variável independente.
+
+10
+00:00:54,359 --> 00:01:01,880
+É provável que você verá os coeficientes M e B expressos como beta 1 e beta 0, respectivamente.
+
+11
+00:01:01,880 --> 00:01:04,760
+Então, o que os coeficientes M e B fazem?
+
+12
+00:01:04,760 --> 00:01:09,079
+O coeficiente de M ou Beta 1 controla a inclinação da linha.
+
+13
+00:01:09,079 --> 00:01:12,519
+O B ou o beta 0 controla a interceptação da linha.
+
+14
+00:01:12,519 --> 00:01:15,719
+No aprendizado de máquina, também o conhecemos como o viés.
+
+15
+00:01:15,719 --> 00:01:22,000
+Esses dois coeficientes são o que estamos resolvendo na regressão linear.
+
+16
+00:01:22,000 --> 00:01:28,480
+Também podemos se estender a várias variáveis ​​de entrada, então x1, x2, x3, com beta 1, beta 2 e beta
+
+17
+00:01:28,480 --> 00:01:32,400
+3, e assim por diante, agindo como inclinações para cada uma dessas variáveis.
+
+18
+00:01:32,400 --> 00:01:37,480
+Nessas dimensões mais altas, você visualizaria a regressão linear como um hiperplano.
+
+19
+00:01:37,480 --> 00:01:39,680
+Então, como nos encaixamos na linha desses pontos?
+
+20
+00:01:39,680 --> 00:01:44,319
+Bem, você notará que há essas diferenças entre os pontos e a linha, esses pequenos
+
+21
+00:01:44,319 --> 00:01:45,319
+segmentos vermelhos.
+
+22
+00:01:45,319 --> 00:01:46,799
+Estes são chamados de resíduos.
+
+23
+00:01:46,799 --> 00:01:51,200
+São as diferenças entre os pontos de dados e as previsões que a linha produziria.
+
+24
+00:01:51,840 --> 00:01:55,040
+Pegue cada um desses resíduos e os coloque.
+
+25
+00:01:55,040 --> 00:01:59,920
+Estes são os erros quadrados e observe que os grandes resíduos são os mais amplificados
+
+26
+00:01:59,920 --> 00:02:01,439
+A área dos quadrados são.
+
+27
+00:02:08,879 --> 00:02:13,439
+Se totalizarmos as áreas de todos esses quadrados para uma determinada linha, teremos a soma do
+
+28
+00:02:13,439 --> 00:02:17,599
+Erro ao quadrado, e isso é conhecido como nossa função de perda.
+
+29
+00:02:17,680 --> 00:02:24,000
+Precisamos encontrar os coeficientes beta 0 e beta 1 que minimizarão essa soma de erro ao quadrado.
+
+30
+00:02:25,039 --> 00:02:29,759
+Os coeficientes podem ser resolvidos com uma variedade de técnicas que variam de decomposição da matriz
+
+31
+00:02:29,759 --> 00:02:32,240
+para a descida de gradiente, que é retratada aqui.
+
+32
+00:02:33,199 --> 00:02:37,519
+Felizmente, muitas bibliotecas estão disponíveis para fazer isso por nós, e vamos mergulhar profundamente em
+
+33
+00:02:37,519 --> 00:02:39,120
+Esses tópicos em outros vídeos.
+
+34
+00:02:41,199 --> 00:02:44,240
+Para validar a regressão linear, existem várias técnicas.
+
+35
+00:02:44,240 --> 00:02:48,719
+Os profissionais de aprendizado de máquina geralmente levam um terço dos dados e o colocam em teste
+
+36
+00:02:48,719 --> 00:02:49,680
+Conjunto de dados.
+
+37
+00:02:49,680 --> 00:02:52,000
+Os dois terços restantes se tornarão o conjunto de dados de treinamento.
+
+38
+00:02:52,560 --> 00:02:56,320
+O conjunto de dados de treinamento será usado para se ajustar à linha de regressão.
+
+39
+00:02:56,879 --> 00:03:00,480
+O conjunto de dados de teste será usado para validar a linha de regressão.
+
+40
+00:03:01,360 --> 00:03:06,640
+Isso é feito para garantir que a regressão tenha um bom desempenho nos dados que nunca viu antes.
+
+41
+00:03:06,640 --> 00:03:10,480
+As métricas usadas para avaliar a regressão dos milênios variam da praça R,
+
+42
+00:03:10,479 --> 00:03:14,959
+erro padrão, estimativa, intervalos de previsão, bem como significância estatística.
+
+43
+00:03:14,959 --> 00:03:17,039
+Estes são tópicos que abordaremos em vídeos futuros.
+
+44
+00:03:18,639 --> 00:03:21,439
+Se você gostou deste vídeo, goste e se inscreva.
+
+45
+00:03:21,439 --> 00:03:25,839
+Veja meus dois livros de O'Reilly, Matemática Essential para Ciência de Dados, e começando com o SQL.
+
+46
+00:03:26,799 --> 00:03:31,919
+O capítulo cinco de matemática essencial para a ciência de dados realmente abrange regressão linear e muito mais profundidade.
+
+47
+00:03:32,799 --> 00:03:36,719
+Se você deseja instruções ao vivo, também ensino na plataforma O'Reilly.
+
+48
+00:03:36,719 --> 00:03:40,719
+Link promocional abaixo.Eu ensino aulas como aprendizado de máquina do zero,
+
+49
+00:03:40,719 --> 00:03:47,039
+probabilidade e sql.Comente sobre quais tópicos você gostaria de ver a seguir, e eu te vejo novamente
+
+50
+00:03:47,039 --> 00:03:53,840
+em três minutos de ciência de dados.
+
